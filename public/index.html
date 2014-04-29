@@ -34,7 +34,11 @@ this is home
 <h1>this is a simple web aplication to run rspec test and maybe more in the future</h1>
 </script>
 <script type="text/x-handlebars" data-template-name="specs">
-This is where the specs will be
+<ul class="list-group">
+{{#each example in model.examples}}
+  <li class="list-group-item">{{example.description}}</li>
+{{/each}}
+</ul>
 </script>
 </body>
 </html>
