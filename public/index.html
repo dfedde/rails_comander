@@ -9,19 +9,32 @@
   <script src="js/ember-data.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/app.js"></script>
-  <link src= css/bootstrap.css rel="stylesheet" media="screen">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <script type="text/x-handlebars" data-template-name="application">
-<div class="navbar"> {{#link-to 'index'}}home{{/link-to}}{{#link-to 'about' }}about{{/link-to}}</div>
-<div class="container">{{outlet}}</div>
+<div class="site-wrapper">
+  <div class="container">
+    <div class="navbar"> 
+      <ul class="nav navbar-nav">
+        <li>{{#link-to 'specs' }}specs{{/link-to}}</li>
+        <li>{{#link-to 'index' }}home{{/link-to}}</li>
+        <li>{{#link-to 'about' }}about{{/link-to}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">{{outlet}}</div>
+</div>
 <footer class="container"></footer>
 </script>
 <script type="text/x-handlebars" data-template-name="index">
-<h1>welcome to a web interface for genarel rails tools</h1>
+this is home
 </script>
 <script type="text/x-handlebars" data-template-name="about">
 <h1>this is a simple web aplication to run rspec test and maybe more in the future</h1>
+</script>
+<script type="text/x-handlebars" data-template-name="specs">
+This is where the specs will be
 </script>
 </body>
 </html>
